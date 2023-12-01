@@ -8,7 +8,16 @@ Before you get started, ensure you have the following prerequisites:
 - Get an ApI key from [OpenAi Api keys](https://platform.openai.com/api-keys) and paste it into the .env file
 - Install the the nessecary requirements in python:
    ```bash
-        pip3 install openai, load_dotenv
+        pip3 install openai, load_dotenv, flask==2.2.5
 
-##
+## Getting started
+
+- Clone this respostiry
+- Make sure you have everything in the prequisites
+- Go to your directory in your terminal and run:
+   ```bash
+       python3 app.py
+or 
+   ```bash
+      python app.py
 
