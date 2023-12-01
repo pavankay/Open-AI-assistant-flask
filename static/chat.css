@@ -1,0 +1,126 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #121212; /* Dark background for the whole page */
+}
+
+#chat-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e; /* Dark theme for chat container */
+  color: white; /* Text color */
+}
+
+#chat-header {
+  background-color: #2a2a2a; /* Slightly lighter dark shade for the header */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-expand {
+  background-color: white;
+  color: #121212; /* Dark text color for contrast */
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  padding: 0 12px;
+  border-radius: 11px; /* Make it circular */
+}
+
+#chat-box {
+  flex-grow: 1;
+  overflow-y: auto; /* Allow scrolling within the chat box */
+  padding: 20px;
+  background: #1e1e1e; /* Same as chat container for a seamless look */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center messages */
+}
+
+.message {
+  display: flex;
+  max-width: 80%; /* Maximum width of messages */
+  word-wrap: break-word;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  font-size: 14px; /* Adjust font-size to match your design */
+  border-radius: 18px; /* Rounded corners for message bubbles */
+}
+
+/* User messages on the right */
+.user-message {
+  background-color: #0b93f6; /* Color for user messages */
+  color: white;
+  align-self: flex-end; /* Aligns the message to the right */
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+/* Bot messages on the left */
+.bot-message {
+  background-color: #2a2a2a; /* Slightly lighter dark shade for bot messages */
+  color: white;
+  align-self: flex-start; /* Aligns the message to the left */
+  margin-left: 10px;
+}
+
+.message-text {
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 60%; /* Adjusted for a better chat bubble appearance */
+}
+
+#message-form {
+  display: flex;
+  padding: 10px;
+  background-color: #2a2a2a; /* Slightly lighter dark shade for the input area */
+}
+
+#message-input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #333; /* Border color */
+  background: #262626; /* Input background */
+  color: white; /* Input text color */
+  border-radius: 20px;
+  outline: none;
+}
+
+#message-form button {
+  border: none;
+  background-color: white;
+  color: #007bff;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px; /* Adjust size as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#message-form button:hover {
+  background-color: #f8f8f8; /* A lighter shade for hover state */
+}
+
+/* Responsive styles if needed */
+@media (max-width: 768px) {
+  #chat-container {
+      width: 100%;
+      max-width: none;
+  }
+
+  .btn-expand {
+      margin-right: auto;
+      margin-left: 10px;
+  }
+}

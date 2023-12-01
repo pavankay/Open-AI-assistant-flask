@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="../static/chat.css"> <!-- Ensure this is the correct path to your CSS file -->
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-header">
+            <!-- <button id="expand-btn" class="btn-expand">+</button> -->
+            <h2>ChatGPT</h2>
+        </div>
+        <div id="chat-box">
+            <!-- Messages will be dynamically inserted here -->
+        </div>
+        <form id="message-form" class="chat-footer">
+            <input type="text" id="message-input" placeholder="Message ChatGPT..." autocomplete="off">
+            <button type="submit" id="send-button">
+                <i class="fas fa-arrow-up"></i> <!-- This is the send button icon -->
+            </button>            
+        </form>
+    </div>
+
+    <script>
+            document.getElementById('message-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var messageInput = document.getElementById('message-input');
+            var message = messageInput.value.trim();
+            if (message) {
+                // Send the message to the Flask server
+                fetch('/send_message', {
+                    method: 'POST',
+                    body: JSON.stringify({ message: message }),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Use the response data from the server
+                    addMessage(data.response, 'message bot-message');
+                });
+
+                addMessage(message, 'message user-message');
+                messageInput.value = '';
+            }
+        });
+
+        function addMessage(text, className) {
+            var messageElement = document.createElement('div');
+            messageElement.textContent = text;
+            messageElement.className = className;
+            var messageBox = document.getElementById('chat-box');
+            messageBox.appendChild(messageElement);
+            messageBox.scrollTop = messageBox.scrollHeight; // Scroll to the bottom
+        }
+
+    </script>
+</body>
+</html>
