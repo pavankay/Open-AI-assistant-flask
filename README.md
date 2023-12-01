@@ -5,6 +5,11 @@ Framework for a Openai assistant api server to a html webpage
 In this repositary I use flask for this example however you can be switch it or take it out for your needs. 
 I use the beta Assistant api with threads, messages, and runs. 
 
+The thread object holds multiple message object so when you call the assistant it can look at the thread for contex. The thread object has a id atrobute of you to add messsages later
+The message object holds text so you can add it to the thread, you use the threads id to find which thread to add it to.
+The run object is used for the exuction of a thread which means to make the assistant to look at the thread and see the last messsage to give a response. For the run object you need the id of the assistint, and the id of the thread.
+
+
 
 
 
@@ -33,6 +38,6 @@ Before you get started, ensure you have the following prerequisites:
      model="gpt-3.5-turbo",
  ```
  or other models depending on your needs for your project
-- For each call you need pay check this [link](https://openai.com/pricing#language-models)for details
+- For each call you need pay check this [link](https://openai.com/pricing#language-models) for details
 
   
