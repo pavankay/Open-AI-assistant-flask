@@ -1,6 +1,9 @@
 # Open-AI-assistant-flask
 Framework for a Openai assistant api server to a html webpage
 
+## About
+In this repositary I use flask for this example however you can be switch it or take it out for your needs. 
+I use the when written
 
 
 ## Prerequisites
@@ -23,4 +26,10 @@ Before you get started, ensure you have the following prerequisites:
 
   #### Short notes
   - Change the use of your assistant for your needs at the top of the python file
-  - 
+  - Depending on your subscription for your Openai acount use diffrent models you can switch the line to be:
+    ```bash
+        model="gpt-3.5-turbo",
+    ```
+    or other models depending on your needs for your project.
+
+  
