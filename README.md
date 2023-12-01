@@ -17,7 +17,7 @@ Before you get started, ensure you have the following prerequisites:
 - Go to your directory in your terminal and run:
    ```bash
        python3 app.py
-or 
+ or 
    ```bash
       python app.py
 
