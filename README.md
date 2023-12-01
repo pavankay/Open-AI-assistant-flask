@@ -1,5 +1,7 @@
 # Open-AI-assistant-flask
-Using flask server a Openai Assistant api with context.
+Framework for a Openai assistant api server to a html webpage
+
+
 
 ## Prerequisites
 
@@ -17,3 +19,8 @@ Before you get started, ensure you have the following prerequisites:
 - Go to your directory in your terminal and run:
    ```bash
        python3 app.py
+- Make sure the links in the html and python is correct for your directory
+
+  #### Short notes
+  - Change the use of your assistant for your needs at the top of the python file
+  - 
