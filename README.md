@@ -26,13 +26,13 @@ Before you get started, ensure you have the following prerequisites:
        python3 app.py
 - Make sure the links in the html and python is correct for your directory
 
-  #### Short notes
-  - Change the use of your assistant for your needs at the top of the python file
-  - Depending on your subscription for your Openai acount use diffrent models so you wont get errors. You can switch the line to be:
-    ```bash
-        model="gpt-3.5-turbo",
-    ```
-    or other models depending on your needs for your project
-  - For each call you need pay check this [link](https://openai.com/pricing#language-models)for details
+#### Short notes
+- Change the use of your assistant for your needs at the top of the python file
+- Depending on your subscription for your Openai acount use diffrent models so you wont get errors. You can switch the line to be:
+ ```bash
+     model="gpt-3.5-turbo",
+ ```
+ or other models depending on your needs for your project
+- For each call you need pay check this [link](https://openai.com/pricing#language-models)for details
 
   
