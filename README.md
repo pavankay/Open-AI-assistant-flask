@@ -13,7 +13,7 @@ Before you get started, ensure you have the following prerequisites:
 ## Getting started
 
 - Clone this respostiry
-- Make sure you have everything in the prequisites
+- Make sure you have everything in the prerequisites
 - Go to your directory in your terminal and run:
    ```bash
        python3 app.py
