@@ -1,3 +1,5 @@
+Author:Arjun Kay
+
 # Open-AI-assistant-flask
 Framework for a Openai assistant api server to a html webpage
 
